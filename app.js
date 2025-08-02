@@ -58,4 +58,8 @@ app.get('/contact', (req, res) => {
 // Start server
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
-}); 
+});
+
+// "scripts": {
+//   "dev": "nodemon app.js"
+// }

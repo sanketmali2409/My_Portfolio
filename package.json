@@ -21,6 +21,14 @@
     "path": "^0.12.7"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1"
-  }
+    "nodemon": "^3.1.10"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sanketmali3716/My_Portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Sanketmali3716/My_Portfolio/issues"
+  },
+  "homepage": "https://github.com/Sanketmali3716/My_Portfolio#readme"
 }
