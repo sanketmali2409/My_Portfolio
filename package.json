@@ -1,0 +1,26 @@
+{
+  "name": "embedded-portfolio",
+  "version": "1.0.0",
+  "description": "Professional portfolio website for Embedded Systems Engineer",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [
+    "portfolio",
+    "embedded",
+    "engineering",
+    "express"
+  ],
+  "author": "Sanket Mali",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "ejs": "^3.1.9",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

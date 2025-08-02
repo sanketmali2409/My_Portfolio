@@ -1,0 +1,481 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "QR-GPS-GSM Security System",
+      "description": "Smart access control system using ESP32-CAM that scans QR codes, reads GPS location, sends alerts via SIM800L (GSM), and activates buzzer on unauthorized access. Perfect for vehicle and building security.",
+      "technologies": ["ESP32-CAM", "Arduino", "QR Scanner", "GPS", "GSM (SIM800L)", "WiFi", "C++"],
+      "image": "/images/projects/esp32-security.jpg",
+      "github": "https://github.com/Sanketmail3716/QR-GPS-GSM-SecuritySystem",
+      "category": "ESP32",
+      "year": 2024,
+      "hardware": ["ESP32-CAM", "GPS Module", "SIM800L GSM", "Buzzer", "QR Scanner"]
+    },
+    {
+      "id": 2,
+      "title": "Three-Node Full Duplex CAN Communication",
+      "description": "Full-duplex communication between three PIC16F877A microcontrollers using CAN protocol with MCP2515 modules. Each node can send and receive data simultaneously with real-time bidirectional communication.",
+      "technologies": ["PIC16F877A", "CAN Protocol", "MCP2515", "MPLAB", "C Programming", "Assembly"],
+      "image": "/images/projects/pic-can-communication.jpg",
+      "github": "https://github.com/Sanketmail3716/Three_node_Full_Duplex",
+      "category": "PIC16F877A",
+      "year": 2024,
+      "hardware": ["PIC16F877A", "MCP2515 CAN Modules", "Oscillators", "Connectors"]
+    },
+    {
+      "id": 3,
+      "title": "Two-Node Full Duplex Communication",
+      "description": "Two-CAN node full-duplex communication system using microcontrollers. Both nodes can send and receive data simultaneously via UART, simulating real-time bidirectional data exchange.",
+      "technologies": ["Microcontrollers", "CAN Protocol", "UART", "Assembly", "Real-time Communication"],
+      "image": "/images/projects/two-node-can.jpg",
+      "github": "https://github.com/Sanketmail3716/Two_node_FullDuplex",
+      "category": "PIC16F877A",
+      "year": 2024,
+      "hardware": ["Microcontrollers", "CAN Modules", "UART Interface"]
+    },
+    {
+      "id": 4,
+      "title": "LPC2148 Temperature Sensor Project",
+      "description": "Temperature monitoring system using LPC2148 ARM7 microcontroller. Reads temperature using analog sensor and displays it on 16x2 LCD with ADC for sensor input and PLL for clock setup.",
+      "technologies": ["LPC2148", "ARM7", "Keil", "ADC", "LCD", "C Programming", "PLL"],
+      "image": "/images/projects/lpc2148-temp.jpg",
+      "github": "https://github.com/Sanketmail3716/LPC2148_TempSensor_Project",
+      "category": "LPC2148",
+      "year": 2024,
+      "hardware": ["LPC2148", "Temperature Sensor", "16x2 LCD", "ADC Circuit"]
+    },
+    {
+      "id": 5,
+      "title": "DC Motor Control with LPC2148",
+      "description": "DC motor direction control using LPC2148 microcontroller. Two switches control motor rotation direction (clockwise and anticlockwise) via GPIO pins with LED indicators.",
+      "technologies": ["LPC2148", "ARM7", "GPIO", "DC Motor Control", "Keil", "C Programming"],
+      "image": "/images/projects/lpc2148-motor.jpg",
+      "github": "https://github.com/Sanketmail3716/DC-Motor-Control-LPC2148",
+      "category": "LPC2148",
+      "year": 2024,
+      "hardware": ["LPC2148", "DC Motor", "Motor Driver", "Switches", "LEDs"]
+    },
+    {
+      "id": 6,
+      "title": "GSM SMS & Call System with LPC2148",
+      "description": "GSM module integration with LPC2148 ARM7 microcontroller for SMS and call functionality. Receives SMS messages, parses them, sends automated replies, and initiates voice calls.",
+      "technologies": ["LPC2148", "ARM7", "GSM (SIM800L)", "UART", "SMS", "Voice Calls", "Keil"],
+      "image": "/images/projects/lpc2148-gsm.jpg",
+      "github": "https://github.com/Sanketmail3716/GSM-SMS-Call-LPC2148",
+      "category": "LPC2148",
+      "year": 2024,
+      "hardware": ["LPC2148", "SIM800L GSM Module", "Antenna", "SIM Card"]
+    },
+    {
+      "id": 7,
+      "title": "8051 Microcontroller Projects",
+      "description": "Collection of 8051 microcontroller projects including LED matrix displays, sensor interfaces, and basic embedded systems applications using assembly and C programming.",
+      "technologies": ["8051", "Assembly", "C Programming", "Keil", "LED Matrix", "Sensors"],
+      "image": "/images/projects/8051-projects.jpg",
+      "github": "https://github.com/Sanketmail3716/8051-Projects",
+      "category": "8051",
+      "year": 2024,
+      "hardware": ["8051 Microcontroller", "LED Matrix", "Sensors", "LCD Display"]
+    },
+    {
+      "id": 8,
+      "title": "STM32 Development Projects",
+      "description": "STM32 microcontroller projects including FreeRTOS applications, sensor integration, and real-time control systems using ARM Cortex-M architecture.",
+      "technologies": ["STM32", "FreeRTOS", "C/C++", "ARM Cortex-M", "Sensors", "GPIO"],
+      "image": "/images/projects/stm32-projects.jpg",
+      "github": "https://github.com/Sanketmail3716/STM32-Projects",
+      "category": "STM32",
+      "year": 2024,
+      "hardware": ["STM32 Development Board", "Sensors", "Actuators", "Display Modules"]
+    },
+    {
+      "id": 9,
+      "title": "Arduino IoT Projects",
+      "description": "Internet of Things projects using Arduino boards for home automation, sensor monitoring, and wireless communication applications.",
+      "technologies": ["Arduino", "C++", "WiFi", "Bluetooth", "Sensors", "IoT"],
+      "image": "/images/projects/arduino-iot.jpg",
+      "github": "https://github.com/Sanketmail3716/Arduino-IoT-Projects",
+      "category": "Arduino",
+      "year": 2024,
+      "hardware": ["Arduino Boards", "WiFi Modules", "Sensors", "Actuators"]
+    },
+    {
+      "id": 10,
+      "title": "Raspberry Pi Applications",
+      "description": "Raspberry Pi projects including home automation, security systems, and multimedia applications using Python and Linux.",
+      "technologies": ["Raspberry Pi", "Python", "Linux", "GPIO", "Camera", "Sensors"],
+      "image": "/images/projects/raspberry-pi.jpg",
+      "github": "https://github.com/Sanketmail3716/Raspberry-Pi-Projects",
+      "category": "Raspberry Pi",
+      "year": 2024,
+      "hardware": ["Raspberry Pi", "Camera Module", "Sensors", "Display"]
+    },
+    {
+      "id": 11,
+      "title": "YOLOv5 Object Detection",
+      "description": "Computer vision project using YOLOv5 for real-time object detection. Includes training scripts, custom dataset preparation, and edge device deployment for AI-powered applications.",
+      "technologies": ["YOLOv5", "Python", "PyTorch", "OpenCV", "Computer Vision", "Machine Learning"],
+      "image": "/images/projects/yolo-detection.jpg",
+      "github": "https://github.com/Sanketmail3716/YOLO-Object-Detection",
+      "category": "AI/ML",
+      "year": 2024,
+      "hardware": ["Camera Module", "Edge Device", "GPU (optional)"]
+    },
+    {
+      "id": 12,
+      "title": "PIC Microcontroller Series",
+      "description": "Collection of PIC microcontroller projects including sensor interfaces, communication protocols, and control systems using MPLAB and C programming.",
+      "technologies": ["PIC Microcontrollers", "MPLAB", "C Programming", "Assembly", "Sensors", "Communication"],
+      "image": "/images/projects/pic-series.jpg",
+      "github": "https://github.com/Sanketmail3716/PIC-Microcontroller-Projects",
+      "category": "PIC Series",
+      "year": 2024,
+      "hardware": ["PIC Microcontrollers", "Sensors", "LCD Display", "Communication Modules"]
+    },
+    {
+      "id": 13,
+      "title": "ESP8266 WiFi Projects",
+      "description": "ESP8266 WiFi module projects for IoT applications including web servers, sensor monitoring, and wireless communication.",
+      "technologies": ["ESP8266", "Arduino", "WiFi", "MQTT", "Web Server", "C++"],
+      "image": "/images/projects/esp8266.jpg",
+      "github": "https://github.com/Sanketmail3716/ESP8266-Projects",
+      "category": "ESP8266",
+      "year": 2024,
+      "hardware": ["ESP8266", "WiFi Module", "Sensors", "Relay Modules"]
+    },
+    {
+      "id": 14,
+      "title": "Sensor Interface Projects",
+      "description": "Various sensor interface projects using different microcontrollers for temperature, humidity, pressure, and motion detection applications.",
+      "technologies": ["Sensors", "ADC", "I2C", "SPI", "Multiple Microcontrollers", "C Programming"],
+      "image": "/images/projects/sensor-interfaces.jpg",
+      "github": "https://github.com/Sanketmail3716/Sensor-Interface-Projects",
+      "category": "Sensor Projects",
+      "year": 2024,
+      "hardware": ["Temperature Sensors", "Humidity Sensors", "Pressure Sensors", "Motion Sensors"]
+    },
+    {
+      "id": 15,
+      "title": "Communication Protocol Projects",
+      "description": "Projects implementing various communication protocols including UART, I2C, SPI, CAN, and wireless communication for embedded systems.",
+      "technologies": ["UART", "I2C", "SPI", "CAN", "Wireless", "Multiple Protocols"],
+      "image": "/images/projects/communication-protocols.jpg",
+      "github": "https://github.com/Sanketmail3716/Communication-Protocol-Projects",
+      "category": "Communication",
+      "year": 2024,
+      "hardware": ["Communication Modules", "Transceivers", "Antennas", "Interface Chips"]
+    },
+    {
+      "id": 16,
+      "title": "Display Interface Projects",
+      "description": "LCD, LED matrix, and OLED display interface projects using various microcontrollers for information display and user interface applications.",
+      "technologies": ["LCD", "LED Matrix", "OLED", "Display Drivers", "GPIO", "I2C"],
+      "image": "/images/projects/display-interfaces.jpg",
+      "github": "https://github.com/Sanketmail3716/Display-Interface-Projects",
+      "category": "Display Projects",
+      "year": 2024,
+      "hardware": ["LCD Displays", "LED Matrix", "OLED Screens", "Display Controllers"]
+    },
+    {
+      "id": 17,
+      "title": "Motor Control Projects",
+      "description": "DC motor, servo motor, and stepper motor control projects using PWM, PID control, and various microcontrollers for automation applications.",
+      "technologies": ["Motor Control", "PWM", "PID", "Servo Motors", "Stepper Motors", "DC Motors"],
+      "image": "/images/projects/motor-control.jpg",
+      "github": "https://github.com/Sanketmail3716/Motor-Control-Projects",
+      "category": "Motor Control",
+      "year": 2024,
+      "hardware": ["DC Motors", "Servo Motors", "Stepper Motors", "Motor Drivers"]
+    },
+    {
+      "id": 18,
+      "title": "Power Management Projects",
+      "description": "Power supply, voltage regulation, and power management projects for embedded systems including battery monitoring and power optimization.",
+      "technologies": ["Power Management", "Voltage Regulation", "Battery Monitoring", "Power Supply", "Efficiency"],
+      "image": "/images/projects/power-management.jpg",
+      "github": "https://github.com/Sanketmail3716/Power-Management-Projects",
+      "category": "Power Management",
+      "year": 2024,
+      "hardware": ["Voltage Regulators", "Battery Packs", "Power Modules", "Monitoring Circuits"]
+    },
+    {
+      "id": 19,
+      "title": "Real-Time Systems",
+      "description": "Real-time operating system projects using FreeRTOS, real-time scheduling, and time-critical applications for embedded systems.",
+      "technologies": ["FreeRTOS", "Real-Time", "Scheduling", "Task Management", "Interrupts"],
+      "image": "/images/projects/real-time-systems.jpg",
+      "github": "https://github.com/Sanketmail3716/Real-Time-Systems",
+      "category": "Real-Time Systems",
+      "year": 2024,
+      "hardware": ["RTOS Compatible Boards", "Timers", "Interrupt Controllers"]
+    },
+    {
+      "id": 20,
+      "title": "Embedded Linux Projects",
+      "description": "Linux-based embedded systems projects including device drivers, kernel modules, and system-level programming for embedded applications.",
+      "technologies": ["Linux", "Device Drivers", "Kernel Modules", "System Programming", "C"],
+      "image": "/images/projects/embedded-linux.jpg",
+      "github": "https://github.com/Sanketmail3716/Embedded-Linux-Projects",
+      "category": "Embedded Linux",
+      "year": 2024,
+      "hardware": ["Linux Boards", "Development Kits", "Peripheral Devices"]
+    },
+    {
+      "id": 21,
+      "title": "Wireless Communication Projects",
+      "description": "WiFi, Bluetooth, Zigbee, and LoRa wireless communication projects for IoT and remote monitoring applications.",
+      "technologies": ["WiFi", "Bluetooth", "Zigbee", "LoRa", "Wireless Protocols", "IoT"],
+      "image": "/images/projects/wireless-communication.jpg",
+      "github": "https://github.com/Sanketmail3716/Wireless-Communication-Projects",
+      "category": "Wireless Communication",
+      "year": 2024,
+      "hardware": ["WiFi Modules", "Bluetooth Modules", "Zigbee Modules", "LoRa Modules"]
+    },
+    {
+      "id": 22,
+      "title": "Security & Authentication Projects",
+      "description": "Embedded security projects including RFID, biometric authentication, encryption, and secure communication protocols.",
+      "technologies": ["RFID", "Biometric", "Encryption", "Security Protocols", "Authentication"],
+      "image": "/images/projects/security-authentication.jpg",
+      "github": "https://github.com/Sanketmail3716/Security-Authentication-Projects",
+      "category": "Security Projects",
+      "year": 2024,
+      "hardware": ["RFID Readers", "Biometric Sensors", "Security Modules", "Encryption Chips"]
+    },
+    {
+      "id": 23,
+      "title": "Data Logging & Storage Projects",
+      "description": "Data acquisition, logging, and storage projects using SD cards, EEPROM, and cloud storage for embedded systems.",
+      "technologies": ["Data Logging", "SD Card", "EEPROM", "Cloud Storage", "Data Acquisition"],
+      "image": "/images/projects/data-logging.jpg",
+      "github": "https://github.com/Sanketmail3716/Data-Logging-Projects",
+      "category": "Data Projects",
+      "year": 2024,
+      "hardware": ["SD Cards", "EEPROM Chips", "Storage Modules", "Data Loggers"]
+    },
+    {
+      "id": 24,
+      "title": "Audio & Video Processing",
+      "description": "Audio and video processing projects using DSP techniques, audio codecs, and video processing for multimedia applications.",
+      "technologies": ["DSP", "Audio Processing", "Video Processing", "Codecs", "Signal Processing"],
+      "image": "/images/projects/audio-video.jpg",
+      "github": "https://github.com/Sanketmail3716/Audio-Video-Projects",
+      "category": "Audio/Video",
+      "year": 2024,
+      "hardware": ["Audio Codecs", "Video Processors", "DSP Chips", "Audio/Video Interfaces"]
+    },
+    {
+      "id": 25,
+      "title": "Robotics & Automation Projects",
+      "description": "Robotics and automation projects including robot arms, autonomous vehicles, and industrial automation using embedded systems.",
+      "technologies": ["Robotics", "Automation", "Control Systems", "Sensors", "Actuators"],
+      "image": "/images/projects/robotics-automation.jpg",
+      "github": "https://github.com/Sanketmail3716/Robotics-Automation-Projects",
+      "category": "Robotics",
+      "year": 2024,
+      "hardware": ["Robot Arms", "Motors", "Sensors", "Control Systems"]
+    },
+    {
+      "id": 26,
+      "title": "Medical Device Projects",
+      "description": "Medical device and healthcare monitoring projects including vital signs monitoring, medical sensors, and healthcare IoT applications.",
+      "technologies": ["Medical Devices", "Healthcare", "Vital Signs", "Medical Sensors", "IoT"],
+      "image": "/images/projects/medical-devices.jpg",
+      "github": "https://github.com/Sanketmail3716/Medical-Device-Projects",
+      "category": "Medical Devices",
+      "year": 2024,
+      "hardware": ["Medical Sensors", "Vital Signs Monitors", "Healthcare Modules"]
+    },
+    {
+      "id": 27,
+      "title": "Environmental Monitoring",
+      "description": "Environmental monitoring projects including air quality, water quality, weather stations, and environmental sensors for IoT applications.",
+      "technologies": ["Environmental Sensors", "Air Quality", "Water Quality", "Weather Monitoring", "IoT"],
+      "image": "/images/projects/environmental-monitoring.jpg",
+      "github": "https://github.com/Sanketmail3716/Environmental-Monitoring-Projects",
+      "category": "Environmental",
+      "year": 2024,
+      "hardware": ["Environmental Sensors", "Air Quality Sensors", "Weather Stations", "Monitoring Equipment"]
+    },
+    {
+      "id": 28,
+      "title": "Smart Home & IoT Projects",
+      "description": "Smart home automation and IoT projects including home security, lighting control, and home monitoring systems.",
+      "technologies": ["Smart Home", "IoT", "Home Automation", "Security", "Lighting Control"],
+      "image": "/images/projects/smart-home.jpg",
+      "github": "https://github.com/Sanketmail3716/Smart-Home-IoT-Projects",
+      "category": "Smart Home",
+      "year": 2024,
+      "hardware": ["Smart Home Devices", "IoT Modules", "Sensors", "Actuators"]
+    },
+    {
+      "id": 29,
+      "title": "Industrial Control Systems",
+      "description": "Industrial automation and control system projects including PLC programming, industrial sensors, and manufacturing automation.",
+      "technologies": ["Industrial Control", "PLC", "Manufacturing", "Automation", "Industrial Sensors"],
+      "image": "/images/projects/industrial-control.jpg",
+      "github": "https://github.com/Sanketmail3716/Industrial-Control-Projects",
+      "category": "Industrial Control",
+      "year": 2024,
+      "hardware": ["PLC Systems", "Industrial Sensors", "Control Panels", "Automation Equipment"]
+    }
+  ],
+  "categories": {
+    "LPC2148": {
+      "description": "ARM7 Microcontroller Projects",
+      "tools": ["Keil", "C Programming", "Assembly", "ARM7 Architecture"],
+      "hardware": ["LPC2148", "LCD Displays", "Sensors", "DC Motors", "GSM Modules"],
+      "technologies": ["ADC", "PLL", "GPIO", "UART", "I2C", "LCD Interface"]
+    },
+    "PIC16F877A": {
+      "description": "PIC Microcontroller Projects",
+      "tools": ["MPLAB", "C Programming", "Assembly", "PIC Architecture"],
+      "hardware": ["PIC16F877A", "CAN Modules (MCP2515)", "Communication Modules"],
+      "technologies": ["CAN Protocol", "UART", "I2C", "ADC", "Full-duplex Communication"]
+    },
+    "PIC Series": {
+      "description": "PIC Microcontroller Family Projects",
+      "tools": ["MPLAB", "C Programming", "Assembly", "PIC Architecture"],
+      "hardware": ["PIC Microcontrollers", "Sensors", "LCD Display", "Communication Modules"],
+      "technologies": ["Sensors", "Communication", "Display Interface", "Control Systems"]
+    },
+    "ESP32": {
+      "description": "WiFi-based Microcontroller Projects",
+      "tools": ["Arduino IDE", "ESP-IDF", "C++", "WiFi Development"],
+      "hardware": ["ESP32-CAM", "GPS Modules", "GSM (SIM800L)", "QR Scanners", "Buzzers"],
+      "technologies": ["WiFi", "Bluetooth", "GPS Tracking", "QR Scanning", "Web Server", "SMS"]
+    },
+    "ESP8266": {
+      "description": "WiFi Module Projects",
+      "tools": ["Arduino IDE", "C++", "WiFi Development"],
+      "hardware": ["ESP8266", "WiFi Module", "Sensors", "Relay Modules"],
+      "technologies": ["WiFi", "MQTT", "Web Server", "IoT", "Sensor Monitoring"]
+    },
+    "STM32": {
+      "description": "ARM Cortex-M Microcontroller Projects",
+      "tools": ["STM32CubeIDE", "C/C++", "FreeRTOS", "ARM Cortex-M"],
+      "hardware": ["STM32 Development Board", "Sensors", "Actuators", "Display Modules"],
+      "technologies": ["FreeRTOS", "GPIO", "ADC", "UART", "SPI", "I2C"]
+    },
+    "8051": {
+      "description": "8051 Microcontroller Projects",
+      "tools": ["Keil", "Assembly", "C Programming", "8051 Architecture"],
+      "hardware": ["8051 Microcontroller", "LED Matrix", "Sensors", "LCD Display"],
+      "technologies": ["Assembly", "C Programming", "LED Control", "Sensor Interface"]
+    },
+    "Arduino": {
+      "description": "Arduino Platform Projects",
+      "tools": ["Arduino IDE", "C++", "Arduino Framework"],
+      "hardware": ["Arduino Boards", "WiFi Modules", "Sensors", "Actuators"],
+      "technologies": ["C++", "WiFi", "Bluetooth", "Sensors", "IoT"]
+    },
+    "Raspberry Pi": {
+      "description": "Single Board Computer Projects",
+      "tools": ["Python", "Linux", "GPIO", "Raspberry Pi OS"],
+      "hardware": ["Raspberry Pi", "Camera Module", "Sensors", "Display"],
+      "technologies": ["Python", "Linux", "GPIO", "Camera", "Sensors"]
+    },
+    "AI/ML": {
+      "description": "Machine Learning & Computer Vision",
+      "tools": ["Python", "PyTorch", "OpenCV", "YOLOv5", "Jupyter Notebooks"],
+      "hardware": ["Camera Modules", "Edge Devices", "GPU (optional)"],
+      "technologies": ["Object Detection", "Computer Vision", "Deep Learning", "Real-time Processing"]
+    },
+    "Sensor Projects": {
+      "description": "Sensor Interface & Data Acquisition",
+      "tools": ["Multiple IDEs", "C Programming", "Python", "Data Analysis"],
+      "hardware": ["Temperature Sensors", "Humidity Sensors", "Pressure Sensors", "Motion Sensors"],
+      "technologies": ["ADC", "I2C", "SPI", "Sensor Calibration", "Data Processing"]
+    },
+    "Communication": {
+      "description": "Communication Protocol Projects",
+      "tools": ["Multiple IDEs", "C Programming", "Protocol Analysis"],
+      "hardware": ["Communication Modules", "Transceivers", "Antennas", "Interface Chips"],
+      "technologies": ["UART", "I2C", "SPI", "CAN", "Wireless", "Multiple Protocols"]
+    },
+    "Display Projects": {
+      "description": "Display Interface & User Interface",
+      "tools": ["Multiple IDEs", "C Programming", "Display Libraries"],
+      "hardware": ["LCD Displays", "LED Matrix", "OLED Screens", "Display Controllers"],
+      "technologies": ["LCD", "LED Matrix", "OLED", "Display Drivers", "GPIO", "I2C"]
+    },
+    "Motor Control": {
+      "description": "Motor Control & Automation",
+      "tools": ["Multiple IDEs", "C Programming", "Control Algorithms"],
+      "hardware": ["DC Motors", "Servo Motors", "Stepper Motors", "Motor Drivers"],
+      "technologies": ["Motor Control", "PWM", "PID", "Servo Motors", "Stepper Motors", "DC Motors"]
+    },
+    "Power Management": {
+      "description": "Power Supply & Management Systems",
+      "tools": ["Circuit Design", "Power Analysis", "Efficiency Optimization"],
+      "hardware": ["Voltage Regulators", "Battery Packs", "Power Modules", "Monitoring Circuits"],
+      "technologies": ["Power Management", "Voltage Regulation", "Battery Monitoring", "Power Supply", "Efficiency"]
+    },
+    "Real-Time Systems": {
+      "description": "Real-Time Operating Systems",
+      "tools": ["FreeRTOS", "Real-Time Analysis", "Task Scheduling"],
+      "hardware": ["RTOS Compatible Boards", "Timers", "Interrupt Controllers"],
+      "technologies": ["FreeRTOS", "Real-Time", "Scheduling", "Task Management", "Interrupts"]
+    },
+    "Embedded Linux": {
+      "description": "Linux-based Embedded Systems",
+      "tools": ["Linux", "Device Drivers", "Kernel Development", "System Programming"],
+      "hardware": ["Linux Boards", "Development Kits", "Peripheral Devices"],
+      "technologies": ["Linux", "Device Drivers", "Kernel Modules", "System Programming", "C"]
+    },
+    "Wireless Communication": {
+      "description": "Wireless Communication Protocols",
+      "tools": ["Multiple IDEs", "Protocol Analysis", "Network Programming"],
+      "hardware": ["WiFi Modules", "Bluetooth Modules", "Zigbee Modules", "LoRa Modules"],
+      "technologies": ["WiFi", "Bluetooth", "Zigbee", "LoRa", "Wireless Protocols", "IoT"]
+    },
+    "Security Projects": {
+      "description": "Security & Authentication Systems",
+      "tools": ["Security Analysis", "Encryption", "Authentication Systems"],
+      "hardware": ["RFID Readers", "Biometric Sensors", "Security Modules", "Encryption Chips"],
+      "technologies": ["RFID", "Biometric", "Encryption", "Security Protocols", "Authentication"]
+    },
+    "Data Projects": {
+      "description": "Data Logging & Storage Systems",
+      "tools": ["Data Analysis", "Database Management", "Cloud Integration"],
+      "hardware": ["SD Cards", "EEPROM Chips", "Storage Modules", "Data Loggers"],
+      "technologies": ["Data Logging", "SD Card", "EEPROM", "Cloud Storage", "Data Acquisition"]
+    },
+    "Audio/Video": {
+      "description": "Audio & Video Processing",
+      "tools": ["DSP Tools", "Audio/Video Processing", "Signal Analysis"],
+      "hardware": ["Audio Codecs", "Video Processors", "DSP Chips", "Audio/Video Interfaces"],
+      "technologies": ["DSP", "Audio Processing", "Video Processing", "Codecs", "Signal Processing"]
+    },
+    "Robotics": {
+      "description": "Robotics & Automation Systems",
+      "tools": ["Robotics Software", "Control Algorithms", "Path Planning"],
+      "hardware": ["Robot Arms", "Motors", "Sensors", "Control Systems"],
+      "technologies": ["Robotics", "Automation", "Control Systems", "Sensors", "Actuators"]
+    },
+    "Medical Devices": {
+      "description": "Medical Device & Healthcare Systems",
+      "tools": ["Medical Standards", "Healthcare Protocols", "Safety Analysis"],
+      "hardware": ["Medical Sensors", "Vital Signs Monitors", "Healthcare Modules"],
+      "technologies": ["Medical Devices", "Healthcare", "Vital Signs", "Medical Sensors", "IoT"]
+    },
+    "Environmental": {
+      "description": "Environmental Monitoring Systems",
+      "tools": ["Environmental Analysis", "Data Collection", "Monitoring Software"],
+      "hardware": ["Environmental Sensors", "Air Quality Sensors", "Weather Stations", "Monitoring Equipment"],
+      "technologies": ["Environmental Sensors", "Air Quality", "Water Quality", "Weather Monitoring", "IoT"]
+    },
+    "Smart Home": {
+      "description": "Smart Home & IoT Automation",
+      "tools": ["IoT Platforms", "Home Automation", "Smart Device Integration"],
+      "hardware": ["Smart Home Devices", "IoT Modules", "Sensors", "Actuators"],
+      "technologies": ["Smart Home", "IoT", "Home Automation", "Security", "Lighting Control"]
+    },
+    "Industrial Control": {
+      "description": "Industrial Automation & Control",
+      "tools": ["PLC Programming", "Industrial Software", "Control Systems"],
+      "hardware": ["PLC Systems", "Industrial Sensors", "Control Panels", "Automation Equipment"],
+      "technologies": ["Industrial Control", "PLC", "Manufacturing", "Automation", "Industrial Sensors"]
+    }
+  }
+} 

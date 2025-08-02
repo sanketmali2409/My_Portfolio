@@ -1,0 +1,231 @@
+<!-- Projects Hero Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="display-4 fw-bold mb-4">
+                    <i class="fas fa-project-diagram me-3"></i>Projects
+                </h1>
+                <p class="lead">Explore my embedded systems and IoT projects organized by microcontroller platforms</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Project Categories Overview -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">
+            <i class="fas fa-layer-group me-3"></i>Project Categories
+        </h2>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <i class="fas fa-microchip fa-3x text-primary mb-3"></i>
+                        <h5>LPC2148 (ARM7)</h5>
+                        <p class="text-muted">ARM7 Microcontroller Projects</p>
+                        <div class="small">
+                            <strong>Tools:</strong> Keil, C Programming, Assembly<br>
+                            <strong>Hardware:</strong> LCD, Sensors, DC Motors, GSM
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <i class="fas fa-cog fa-3x text-success mb-3"></i>
+                        <h5>PIC16F877A</h5>
+                        <p class="text-muted">PIC Microcontroller Projects</p>
+                        <div class="small">
+                            <strong>Tools:</strong> MPLAB, C Programming, Assembly<br>
+                            <strong>Hardware:</strong> CAN Modules, Communication
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <i class="fas fa-wifi fa-3x text-info mb-3"></i>
+                        <h5>ESP32</h5>
+                        <p class="text-muted">WiFi-based Microcontroller</p>
+                        <div class="small">
+                            <strong>Tools:</strong> Arduino IDE, ESP-IDF, C++<br>
+                            <strong>Hardware:</strong> GPS, GSM, QR Scanner, Camera
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 mb-4">
+                <div class="card h-100 text-center">
+                    <div class="card-body">
+                        <i class="fas fa-brain fa-3x text-warning mb-3"></i>
+                        <h5>AI/ML</h5>
+                        <p class="text-muted">Machine Learning & Computer Vision</p>
+                        <div class="small">
+                            <strong>Tools:</strong> Python, PyTorch, YOLOv5<br>
+                            <strong>Hardware:</strong> Camera, Edge Devices
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Project Filters -->
+<section class="py-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="d-flex justify-content-center flex-wrap gap-2" id="filterButtons">
+                    <button class="btn btn-outline-primary active" data-filter="all">All Projects</button>
+                    <button class="btn btn-outline-primary" data-filter="LPC2148">LPC2148 (ARM7)</button>
+                    <button class="btn btn-outline-primary" data-filter="PIC16F877A">PIC16F877A</button>
+                    <button class="btn btn-outline-primary" data-filter="ESP32">ESP32</button>
+                    <button class="btn btn-outline-primary" data-filter="AI/ML">AI/ML</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Grid -->
+<section class="py-5">
+    <div class="container">
+        <div class="row" id="projectsGrid">
+            <% projects.forEach(project => { %>
+            <div class="col-lg-6 col-xl-4 mb-4 project-item" data-category="<%= project.category %>">
+                <div class="card h-100 project-card">
+                    <div class="card-img-top bg-light text-center py-4">
+                        <% if (project.category === 'LPC2148') { %>
+                            <i class="fas fa-microchip fa-4x text-primary"></i>
+                        <% } else if (project.category === 'PIC16F877A') { %>
+                            <i class="fas fa-cog fa-4x text-success"></i>
+                        <% } else if (project.category === 'ESP32') { %>
+                            <i class="fas fa-wifi fa-4x text-info"></i>
+                        <% } else if (project.category === 'AI/ML') { %>
+                            <i class="fas fa-brain fa-4x text-warning"></i>
+                        <% } else { %>
+                            <i class="fas fa-project-diagram fa-4x text-secondary"></i>
+                        <% } %>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <h5 class="card-title mb-0"><%= project.title %></h5>
+                            <span class="badge bg-info"><%= project.category %></span>
+                        </div>
+                        <p class="card-text"><%= project.description %></p>
+                        <div class="mb-3">
+                            <% project.technologies.slice(0, 4).forEach(tech => { %>
+                            <span class="badge bg-secondary me-1 mb-1"><%= tech %></span>
+                            <% }) %>
+                            <% if (project.technologies.length > 4) { %>
+                            <span class="badge bg-light text-dark">+<%= project.technologies.length - 4 %> more</span>
+                            <% } %>
+                        </div>
+                        <% if (project.hardware && project.hardware.length > 0) { %>
+                        <div class="mb-3">
+                            <small class="text-muted"><strong>Hardware:</strong></small><br>
+                            <% project.hardware.slice(0, 3).forEach(hw => { %>
+                            <span class="badge bg-light text-dark me-1 mb-1"><%= hw %></span>
+                            <% }) %>
+                            <% if (project.hardware.length > 3) { %>
+                            <span class="badge bg-light text-dark">+<%= project.hardware.length - 3 %> more</span>
+                            <% } %>
+                        </div>
+                        <% } %>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <small class="text-muted">Year: <%= project.year %></small>
+                            <a href="<%= project.github %>" class="btn btn-outline-primary btn-sm" target="_blank">
+                                <i class="fab fa-github me-1"></i>View Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+    </div>
+</section>
+
+<!-- Project Statistics -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Project Statistics</h2>
+        <div class="row text-center">
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="stat-item">
+                    <i class="fas fa-microchip fa-3x text-primary mb-3"></i>
+                    <h3 class="fw-bold"><%= projects.length %></h3>
+                    <p class="text-muted">Total Projects</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="stat-item">
+                    <i class="fas fa-code fa-3x text-success mb-3"></i>
+                    <h3 class="fw-bold">20+</h3>
+                    <p class="text-muted">Technologies Used</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="stat-item">
+                    <i class="fas fa-calendar-alt fa-3x text-info mb-3"></i>
+                    <h3 class="fw-bold">5+</h3>
+                    <p class="text-muted">Years Experience</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="stat-item">
+                    <i class="fas fa-github fa-3x text-dark mb-3"></i>
+                    <h3 class="fw-bold">29</h3>
+                    <p class="text-muted">GitHub Repositories</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h3 class="mb-4">Interested in collaborating on embedded projects?</h3>
+                <p class="lead mb-4">Let's discuss how we can work together on your next hardware project.</p>
+                <a href="/contact" class="btn btn-primary btn-lg">
+                    <i class="fas fa-paper-plane me-2"></i>Get In Touch
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+// Project filtering functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('#filterButtons button');
+    const projectItems = document.querySelectorAll('.project-item');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const filter = this.getAttribute('data-filter');
+            
+            // Update active button
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            
+            // Filter projects
+            projectItems.forEach(item => {
+                if (filter === 'all' || item.getAttribute('data-category') === filter) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+</script> 
