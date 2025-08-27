@@ -1,21 +1,16 @@
-<<<<<<< HEAD
-# Portfolio
-🚀 Passionate Embedded Systems and Robotics enthusiast with hands-on experience in microcontrollers (8051, PIC16F877A, LPC2148), ESP32, IoT, and automation. Skilled in C/C++, Python, and real-time systems. Always building, learning, and solving real-world problems using code and circuits.
-=======
-# Embedded Systems Engineer Portfolio
+# Sanket Mali - Embedded Systems Engineer Portfolio
 
-A professional portfolio website for Sanket Mali, an Embedded Systems Engineer specializing in microcontroller programming and IoT solutions.
+A professional portfolio website for Sanket Mali, an Embedded Systems Engineer specializing in microcontroller programming, robotics, and IoT solutions.
 
 ## 🚀 Features
 
-- **Professional Design**: Clean, modern interface with Bootstrap 5
-- **Responsive Layout**: Mobile-friendly design that works on all devices
-- **Project Showcase**: Detailed project portfolio with filtering capabilities
-- **Skills Display**: Interactive skills section with progress indicators
-- **Contact Form**: Functional contact form with validation
-- **Resume Download**: Professional resume section with PDF download
-- **Smooth Animations**: CSS animations and JavaScript interactions
-- **SEO Optimized**: Proper meta tags and structured content
+- **Professional Design**: Clean, modern interface with Bootstrap 5.
+- **Responsive Layout**: Mobile-friendly design that works on all devices.
+- **Project Showcase**: Detailed project portfolio with category filtering.
+- **Skills Display**: Comprehensive skills and technical expertise sections.
+- **Resume Download**: Integrated links to download a professional resume.
+- **Smooth Animations**: On-scroll reveal animations and interactive elements.
+- **SEO Optimized**: Proper meta tags and structured content.
 
 ## 🛠️ Technologies Used
 
@@ -24,7 +19,7 @@ A professional portfolio website for Sanket Mali, an Embedded Systems Engineer s
 - **Templating**: EJS (Embedded JavaScript)
 - **Styling**: Bootstrap 5, Custom CSS
 - **Icons**: Font Awesome 6
-- **Data Management**: JSON files
+- **Data Management**: JSON for project data.
 
 ## 📁 Project Structure
 
