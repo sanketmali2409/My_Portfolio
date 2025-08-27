@@ -50,7 +50,7 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
     res.render('about', { 
         title: 'About',
-        projects: projects  // Add this line
+        projects: projects // Make sure to pass projects data if needed
     });
 });
 

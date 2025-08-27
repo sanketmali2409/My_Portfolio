@@ -29,6 +29,43 @@
     </div>
 </section>
 
+<!-- About Me Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="text-center mb-5">
+                    <i class="fas fa-user me-3"></i>About Me
+                </h2>
+                <div class="card">
+                    <div class="card-body p-5">
+                        <p class="lead">
+                            Hello! I'm Sanket Mali, a passionate Embedded Systems Engineer with over 5 years of experience 
+                            in designing and developing innovative microcontroller-based solutions.
+                        </p>
+                        <p>
+                            My journey in embedded systems began with the classic 8051 microcontroller, where I learned 
+                            the fundamentals of assembly language programming and low-level hardware interactions. 
+                            Over the years, I've expanded my expertise to include modern platforms like STM32, ESP32, 
+                            and PIC microcontrollers.
+                        </p>
+                        <p>
+                            I specialize in creating IoT solutions that bridge the gap between physical hardware and 
+                            cloud-based services. My work involves developing real-time control systems, implementing 
+                            communication protocols, and optimizing code for performance and power efficiency.
+                        </p>
+                        <p>
+                            When I'm not coding microcontrollers, I enjoy exploring new technologies in artificial 
+                            intelligence and machine learning, particularly their applications in embedded systems 
+                            and edge computing.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Featured Projects Section -->
 <section class="py-5">
     <div class="container">
@@ -66,18 +103,80 @@
                 </div>
                 <% }) %>
             <% } else { %>
-                <div class="col-12 text-center">
-                    <p class="text-muted">No featured projects available at the moment.</p>
+                <!-- Static Project Cards if no projects data available -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 project-card">
+                        <div class="card-img-top bg-light text-center py-4">
+                            <i class="fas fa-microchip fa-4x text-primary"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">IoT Weather Station</h5>
+                            <p class="card-text">ESP32-based weather monitoring system with cloud connectivity and real-time data visualization...</p>
+                            <div class="mb-3">
+                                <span class="badge bg-secondary me-1">ESP32</span>
+                                <span class="badge bg-secondary me-1">WiFi</span>
+                                <span class="badge bg-secondary me-1">MQTT</span>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <a href="https://github.com/sanketmali2409" class="btn btn-outline-primary btn-sm" target="_blank">
+                                <i class="fab fa-github me-1"></i>View Code
+                            </a>
+                            <span class="badge bg-info float-end">ESP32</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 project-card">
+                        <div class="card-img-top bg-light text-center py-4">
+                            <i class="fas fa-cog fa-4x text-success"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Smart Home Controller</h5>
+                            <p class="card-text">STM32-based home automation system with mobile app control and voice commands...</p>
+                            <div class="mb-3">
+                                <span class="badge bg-secondary me-1">STM32</span>
+                                <span class="badge bg-secondary me-1">FreeRTOS</span>
+                                <span class="badge bg-secondary me-1">Bluetooth</span>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <a href="https://github.com/sanketmali2409" class="btn btn-outline-primary btn-sm" target="_blank">
+                                <i class="fab fa-github me-1"></i>View Code
+                            </a>
+                            <span class="badge bg-info float-end">STM32</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="card h-100 project-card">
+                        <div class="card-img-top bg-light text-center py-4">
+                            <i class="fas fa-robot fa-4x text-warning"></i>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Robotic Arm Control</h5>
+                            <p class="card-text">6-DOF robotic arm with inverse kinematics and precise servo control system...</p>
+                            <div class="mb-3">
+                                <span class="badge bg-secondary me-1">Arduino</span>
+                                <span class="badge bg-secondary me-1">Servo</span>
+                                <span class="badge bg-secondary me-1">Kinematics</span>
+                            </div>
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <a href="https://github.com/sanketmali2409" class="btn btn-outline-primary btn-sm" target="_blank">
+                                <i class="fab fa-github me-1"></i>View Code
+                            </a>
+                            <span class="badge bg-info float-end">Arduino</span>
+                        </div>
+                    </div>
                 </div>
             <% } %>
         </div>
-        <% if (typeof projects !== 'undefined' && projects && projects.length > 0) { %>
         <div class="text-center mt-4">
             <a href="/projects" class="btn btn-primary btn-lg">
                 <i class="fas fa-arrow-right me-2"></i>View All Projects
             </a>
         </div>
-        <% } %>
     </div>
 </section>
 
@@ -118,6 +217,55 @@
                     <i class="fas fa-robot fa-3x text-primary mb-3"></i>
                     <h5>Robotics</h5>
                     <p class="text-muted">Control Systems, Automation</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Experience Timeline -->
+<section class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">
+            <i class="fas fa-briefcase me-3"></i>Professional Journey
+        </h2>
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="timeline">
+                    <div class="timeline-item mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start">
+                                    <div>
+                                        <h5 class="card-title">Senior Embedded Systems Engineer</h5>
+                                        <h6 class="card-subtitle mb-2 text-muted">Current Role</h6>
+                                    </div>
+                                    <span class="badge bg-primary">2023 - Present</span>
+                                </div>
+                                <p class="card-text">
+                                    Leading development of advanced IoT solutions and mentoring junior engineers. 
+                                    Focus on STM32 and ESP32 platforms with real-time systems.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="timeline-item mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="d-flex justify-content-between align-items-start">
+                                    <div>
+                                        <h5 class="card-title">Embedded Systems Engineer</h5>
+                                        <h6 class="card-subtitle mb-2 text-muted">Previous Role</h6>
+                                    </div>
+                                    <span class="badge bg-success">2021 - 2023</span>
+                                </div>
+                                <p class="card-text">
+                                    Developed microcontroller applications and IoT solutions. 
+                                    Specialized in industrial automation and control systems.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
