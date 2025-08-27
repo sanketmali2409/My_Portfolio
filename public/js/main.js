@@ -1,102 +1,44 @@
-const express = require('express');
-const path = require('path');
-const app = express();
-
-// Set view engine
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'));
-
-// Static files
-app.use(express.static(path.join(__dirname, 'public')));
-
-// Sample projects data - replace with your actual data
-const projects = [
-    {
-        title: "IoT Weather Station",
-        description: "ESP32-based weather monitoring system with cloud connectivity and real-time data visualization.",
-        category: "ESP32",
-        technologies: ["ESP32", "C++", "WiFi", "MQTT", "Sensors"],
-        hardware: ["DHT22", "BMP280", "LCD Display", "ESP32 DevKit"],
-        year: "2024",
-        github: "https://github.com/sanketmali2409/weather-station"
-    },
-    {
-        title: "ARM7 LCD Controller", 
-        description: "LPC2148-based LCD control system with menu navigation and sensor data display.",
-        category: "LPC2148",
-        technologies: ["C", "Keil", "ARM7", "LCD Interface"],
-        hardware: ["LPC2148", "16x2 LCD", "Push Buttons", "Temperature Sensor"],
-        year: "2023",
-        github: "https://github.com/sanketmali2409/arm7-lcd-controller"
-    },
-    {
-        title: "PIC CAN Communication",
-        description: "CAN bus communication system using PIC16F877A for automotive applications.", 
-        category: "PIC16F877A",
-        technologies: ["C", "MPLAB", "CAN Protocol", "PIC16F877A"],
-        hardware: ["PIC16F877A", "MCP2515", "CAN Transceiver", "LCD"],
-        year: "2023",
-        github: "https://github.com/sanketmali2409/pic-can-bus"
+document.addEventListener('DOMContentLoaded', function() {
+    // Project filtering logic
+    const filterContainer = document.querySelector('#project-filters');
+    if (!filterContainer) {
+        return;
     }
-];
-// Routes
-app.get('/', (req, res) => {
-    res.render('index', { 
-        title: 'Home',
-        projects: projects  // Add this line
-    });
-});
 
-app.get('/about', (req, res) => {
-    res.render('about', { 
-        title: 'About',
-        projects: projects // Make sure to pass projects data if needed
-    });
-});
+    const projectItems = document.querySelectorAll('.project-grid .project-item');
+    if (projectItems.length === 0) {
+        return;
+    }
 
-app.get('/projects', (req, res) => {
-    res.render('projects', { 
-        title: 'Projects - Sanket Mali | Embedded Systems Engineer',
-        projects: projects 
-    });
-});
+    filterContainer.addEventListener('click', function(e) {
+        // Ensure a button was clicked
+        if (e.target.tagName !== 'BUTTON') {
+            return;
+        }
 
-app.get('/skills', (req, res) => {
-    res.render('skills', { 
-        title: 'Skills - Sanket Mali | Embedded Systems Engineer'
-    });
-});
+        // Update active button state
+        const activeButton = filterContainer.querySelector('.active');
+        if (activeButton) activeButton.classList.remove('active');
+        e.target.classList.add('active');
 
-app.get('/resume', (req, res) => {
-    res.render('resume', { 
-        title: 'Resume - Sanket Mali | Embedded Systems Engineer'
-    });
-});
+        const filterValue = e.target.dataset.filter;
 
-app.get('/contact', (req, res) => {
-    res.render('contact', { 
-        title: 'Contact - Sanket Mali | Embedded Systems Engineer'
-    });
-});
+        // Show/hide projects based on filter
+        projectItems.forEach(item => {
+            const itemCategory = item.dataset.category;
+            const shouldBeVisible = filterValue === '*' || itemCategory === filterValue;
 
-// Handle 404
-app.use((req, res) => {
-    res.status(404).render('404', { 
-        title: '404 - Page Not Found'
+            if (shouldBeVisible) {
+                item.classList.remove('d-none');
+                setTimeout(() => item.classList.remove('project-item-hidden'), 20);
+            } else {
+                item.classList.add('project-item-hidden');
+                item.addEventListener('transitionend', () => {
+                    if (item.classList.contains('project-item-hidden')) {
+                        item.classList.add('d-none');
+                    }
+                }, { once: true });
+            }
+        });
     });
-});
-
-// Error handler
-app.use((err, req, res, next) => {
-    console.error('Error:', err.stack);
-    res.status(500).render('error', { 
-        title: '500 - Server Error',
-        error: process.env.NODE_ENV === 'development' ? err : {}
-    });
-});
-
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-    console.log(`Visit: http://localhost:${PORT}`);
 });

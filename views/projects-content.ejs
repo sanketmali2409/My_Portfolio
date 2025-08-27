@@ -80,12 +80,12 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="d-flex justify-content-center flex-wrap gap-2" id="filterButtons">
-                    <button class="btn btn-outline-primary active" data-filter="all">All Projects</button>
-                    <button class="btn btn-outline-primary" data-filter="LPC2148">LPC2148 (ARM7)</button>
-                    <button class="btn btn-outline-primary" data-filter="PIC16F877A">PIC16F877A</button>
-                    <button class="btn btn-outline-primary" data-filter="ESP32">ESP32</button>
-                    <button class="btn btn-outline-primary" data-filter="AI/ML">AI/ML</button>
+                <div id="project-filters" class="d-flex justify-content-center flex-wrap gap-2" role="group" aria-label="Project Filters">
+                    <button type="button" class="btn btn-outline-primary active" data-filter="*">All Projects</button>
+                    <button type="button" class="btn btn-outline-primary" data-filter="lpc2148">LPC2148 (ARM7)</button>
+                    <button type="button" class="btn btn-outline-primary" data-filter="pic16f877a">PIC16F877A</button>
+                    <button type="button" class="btn btn-outline-primary" data-filter="esp32">ESP32</button>
+                    <button type="button" class="btn btn-outline-primary" data-filter="ai/ml">AI/ML</button>
                 </div>
             </div>
         </div>
@@ -95,9 +95,9 @@
 <!-- Projects Grid -->
 <section class="py-5">
     <div class="container">
-        <div class="row" id="projectsGrid">
+        <div class="row project-grid d-flex align-items-stretch">
             <% projects.forEach(project => { %>
-            <div class="col-lg-6 col-xl-4 mb-4 project-item" data-category="<%= project.category %>">
+            <div class="col-lg-6 col-xl-4 mb-4 project-item" data-category="<%= project.category.toLowerCase().replace(/\s+/g, '-') %>">
                 <div class="card h-100 project-card">
                     <div class="card-img-top bg-light text-center py-4">
                         <% if (project.category === 'LPC2148') { %>
@@ -202,32 +202,3 @@
         </div>
     </div>
 </section>
-
-<script>
-// Project filtering functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const filterButtons = document.querySelectorAll('#filterButtons button');
-    const projectItems = document.querySelectorAll('.project-item');
-
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const filter = this.getAttribute('data-filter');
-            
-            // Update active button
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
-            
-            // Filter projects
-            projectItems.forEach(item => {
-                if (filter === 'all' || item.getAttribute('data-category') === filter) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        });
-    });
-});
-</script> 
-
-

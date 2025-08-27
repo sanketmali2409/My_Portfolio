@@ -68,7 +68,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-dark text-light py-4 mt-5">
+    <footer class="bg-dark text-light py-4 mt-5 scroll-reveal">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
@@ -156,5 +156,41 @@
 
     <!-- Custom JS file if exists -->
     <script src="/js/main.js"></script>
+
+    <!-- ScrollReveal JS -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sr = ScrollReveal({
+                origin: 'bottom',
+                distance: '60px',
+                duration: 1000,
+                delay: 200,
+                reset: false // Animation will only happen once
+            });
+
+            // Target elements with the 'scroll-reveal' class
+            sr.reveal('.scroll-reveal', {
+                interval: 200
+            });
+
+            // Target individual cards for a slightly different animation
+            sr.reveal('.scroll-reveal-card', {
+                interval: 150
+            });
+        });
+
+        // Navbar scroll effect
+        document.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar.fixed-top');
+            if (navbar) {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('navbar-scrolled');
+                } else {
+                    navbar.classList.remove('navbar-scrolled');
+                }
+            }
+        });
+    </script>
 </body>
 </html>

@@ -76,6 +76,8 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: none;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    display: flex; /* Enable flexbox for internal layout */
+    flex-direction: column; /* Stack content vertically */
 }
 
 .project-card:hover {
@@ -85,6 +87,11 @@ body {
 
 .project-card .card-img-top {
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.project-card .card-body {
+    flex-grow: 1; /* Allow card body to expand */
+    min-height: 160px; /* Ensure enough space for description and technologies */
 }
 
 /* Timeline */
@@ -195,6 +202,7 @@ body {
     background: var(--gradient-primary);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    transition: font-size 0.3s ease-in-out;
 }
 
 .navbar-nav .nav-link {
@@ -500,6 +508,7 @@ footer .social-links a:hover {
 .navbar {
     z-index: 1030 !important;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
 }
 
 /* Fix navbar brand text color issue */
@@ -510,6 +519,23 @@ footer .social-links a:hover {
 .navbar-dark .navbar-brand:hover,
 .navbar-dark .navbar-brand:focus {
     color: #f8f9fa !important;
+}
+
+/* Scrolled state for navbar */
+.navbar-scrolled {
+    background-color: rgba(33, 37, 41, 0.95) !important;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
+}
+
+.navbar-scrolled .navbar-brand {
+    font-size: 1.1rem !important;
+}
+
+.navbar-scrolled .nav-link {
+    font-size: 0.9rem;
 }
 
 /* Ensure navbar background */
@@ -546,5 +572,53 @@ footer .social-links a:hover {
         height: 20px;
         background-color: #007bff;
         border-radius: 2px;
+    }
+}
+
+/* Project Filter Styles */
+#project-filters .btn {
+    margin: 5px;
+    border-radius: 20px;
+    padding: 8px 20px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+#project-filters .btn.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: transparent;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Animated Project Filtering */
+.project-item {
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.project-item.project-item-hidden {
+    opacity: 0;
+    transform: scale(0.9);
+}
+
+/* Project List View Card Styles */
+.project-card-list-view {
+    transition: all 0.3s ease;
+    border: 1px solid #e9ecef;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.project-card-list-view:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border-color: var(--primary-color);
+}
+
+.project-icon-bg {
+    min-height: 200px; /* Ensure a good height for the icon area */
+}
+
+@media (max-width: 991.98px) {
+    .project-icon-bg {
+        min-height: 150px;
     }
 }

@@ -43,7 +43,7 @@ app.get('/projects', (req, res) => {
     res.render('projects', {
         title: 'Projects - Sanket Mali',
         projects: projectsData.projects,
-        categories: projectsData.categories
+        categories: Object.keys(projectsData.categories)
     });
 });
 
