@@ -1,5 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Project filtering logic
+    // Set the name in the navbar brand
+    const navbarBrand = document.querySelector('.navbar-brand');
+    if (navbarBrand) {
+        // Replace the content of the navbar brand with an icon and the styled name.
+        navbarBrand.innerHTML = '<i class="fas fa-cog brand-icon me-2"></i><span class="brand-text">Sanket Mali</span>';
+    }
+
     const filterContainer = document.querySelector('#project-filters');
     if (!filterContainer) {
         return;

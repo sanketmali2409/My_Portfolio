@@ -199,9 +199,6 @@ body {
     font-weight: 700;
     font-size: 1.5rem;
     letter-spacing: 0.5px;
-    background: var(--gradient-primary);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     transition: font-size 0.3s ease-in-out;
 }
 
@@ -408,8 +405,7 @@ footer .social-links a:hover {
 
 /* Ensure main content doesn't hide behind fixed navbar */
 .main-content {
-    margin-top: 76px; /* Height of navbar + some padding */
-    min-height: calc(100vh - 76px);
+    min-height: 100vh;
 }
 
 /* Navbar brand fixes */
@@ -422,6 +418,19 @@ footer .social-links a:hover {
 
 .navbar-brand:hover {
     color: #f8f9fa !important;
+}
+
+/* The .brand-text now inherits the white color from .navbar-brand. */
+
+/* Style for the icon in the navbar brand */
+.navbar-brand .brand-icon {
+    font-size: 0.9em; /* Make icon slightly smaller */
+    vertical-align: -1px; /* Align icon better with text */
+    transition: transform 0.5s ease-in-out;
+}
+
+.navbar-brand:hover .brand-icon {
+    transform: rotate(180deg);
 }
 
 /* Navbar link styles */
@@ -488,9 +497,6 @@ footer .social-links a:hover {
         transform: translateX(5px);
     }
     
-    .main-content {
-        margin-top: 70px; /* Slightly less for mobile */
-    }
 }
 
 /* Small mobile adjustments */
@@ -499,9 +505,6 @@ footer .social-links a:hover {
         font-size: 1.1rem !important;
     }
     
-    .main-content {
-        margin-top: 65px;
-    }
 }
 
 /* Ensure navbar stays on top */
