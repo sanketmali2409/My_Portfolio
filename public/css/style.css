@@ -393,3 +393,158 @@ footer .social-links a:hover {
 ::-webkit-scrollbar-thumb:hover {
     background: #0056b3;
 }
+
+/* =================================
+   NAVBAR FIX CSS - Add to your style.css
+   ================================= */
+
+/* Ensure main content doesn't hide behind fixed navbar */
+.main-content {
+    margin-top: 76px; /* Height of navbar + some padding */
+    min-height: calc(100vh - 76px);
+}
+
+/* Navbar brand fixes */
+.navbar-brand {
+    color: white !important;
+    text-decoration: none !important;
+    font-weight: 700 !important;
+    font-size: 1.25rem !important;
+}
+
+.navbar-brand:hover {
+    color: #f8f9fa !important;
+}
+
+/* Navbar link styles */
+.navbar-nav .nav-link {
+    color: rgba(255,255,255,0.85) !important;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+    margin: 0 4px;
+    padding: 8px 12px !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: white !important;
+    background-color: rgba(255,255,255,0.1);
+}
+
+.navbar-nav .nav-link.active {
+    color: white !important;
+    background-color: rgba(0,123,255,0.3);
+    font-weight: 600;
+}
+
+/* Navbar toggler button */
+.navbar-toggler {
+    border: 1px solid rgba(255,255,255,0.3) !important;
+    padding: 4px 8px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255,255,255,0.25);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.85%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* Mobile navbar collapse */
+@media (max-width: 991.98px) {
+    .navbar-collapse {
+        background-color: rgba(52, 58, 64, 0.98);
+        backdrop-filter: blur(10px);
+        margin: 0.5rem -1rem -0.5rem -1rem;
+        padding: 1rem;
+        border-radius: 8px;
+        margin-top: 0.5rem;
+        border: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .navbar-nav {
+        text-align: center;
+        padding: 0.5rem 0;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 0.75rem 1rem !important;
+        margin: 0.25rem 0;
+        border-radius: 6px;
+        font-size: 1rem;
+    }
+    
+    .navbar-nav .nav-link:hover {
+        background-color: rgba(255,255,255,0.15);
+        transform: translateX(5px);
+    }
+    
+    .main-content {
+        margin-top: 70px; /* Slightly less for mobile */
+    }
+}
+
+/* Small mobile adjustments */
+@media (max-width: 575.98px) {
+    .navbar-brand {
+        font-size: 1.1rem !important;
+    }
+    
+    .main-content {
+        margin-top: 65px;
+    }
+}
+
+/* Ensure navbar stays on top */
+.navbar {
+    z-index: 1030 !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Fix navbar brand text color issue */
+.navbar-dark .navbar-brand {
+    color: white !important;
+}
+
+.navbar-dark .navbar-brand:hover,
+.navbar-dark .navbar-brand:focus {
+    color: #f8f9fa !important;
+}
+
+/* Ensure navbar background */
+.navbar.bg-dark {
+    background-color: #343a40 !important;
+}
+
+/* Active link indicator */
+.navbar-nav .nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 6px;
+    height: 6px;
+    background-color: #007bff;
+    border-radius: 50%;
+}
+
+/* Mobile active link indicator */
+@media (max-width: 991.98px) {
+    .navbar-nav .nav-link.active::after {
+        display: none;
+    }
+    
+    .navbar-nav .nav-link.active::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 3px;
+        height: 20px;
+        background-color: #007bff;
+        border-radius: 2px;
+    }
+}
