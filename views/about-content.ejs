@@ -1,147 +1,166 @@
-<!-- About Hero Section -->
-<section class="py-5 bg-light">
+<!-- Hero Section -->
+<!-- <section class="hero-section bg-gradient-primary text-white py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold mb-4">
+                    <i class="fas fa-microchip me-3"></i>
+                    Embedded Systems Engineer
+                </h1>
+                <p class="lead mb-4">
+                    Passionate about creating innovative solutions with microcontrollers, 
+                    IoT systems, and embedded hardware. Specializing in STM32, ESP32, 
+                    8051, and PIC microcontroller programming.
+                </p>
+                <div class="hero-buttons">
+                    <a href="/projects" class="btn btn-light btn-lg me-3">
+                        <i class="fas fa-project-diagram me-2"></i>View Projects
+                    </a>
+                    <a href="/contact" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-envelope me-2"></i>Get In Touch
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center">
+                <div class="hero-image"> -->
+                    <!-- Replaced microchip icon with profile image -->
+                    <!-- <img src="/images/profile.jpg" alt="Sanket Mali" class="img-fluid rounded-circle" style="max-width: 300px; max-height: 300px; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<section class="hero-section bg-gradient-primary text-white py-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h1 class="display-4 fw-bold mb-4">
+                    Embedded Systems Engineer
+                </h1>
+                <p class="lead mb-4">
+                    Passionate about creating innovative solutions with microcontrollers, 
+                    IoT systems, and embedded hardware. Specializing in STM32, ESP32, 
+                    8051, and PIC microcontroller programming.
+                </p>
+                <div class="hero-buttons">
+                    <a href="/projects" class="btn btn-light btn-lg me-3">
+                        <i class="fas fa-project-diagram me-2"></i>View Projects
+                    </a>
+                    <a href="/contact" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-envelope me-2"></i>Get In Touch
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center">
+                <div class="hero-image">
+                    <img src="/images/profile.jpg" alt="Sanket Mali" class="img-fluid rounded-circle profile-hero" style="max-width: 350px; max-height: 350px; object-fit: cover; border: 4px solid rgba(255,255,255,0.3); box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- Featured Projects Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="text-center mb-5">
+                    <i class="fas fa-project-diagram me-3"></i>Featured Projects
+                </h2>
+            </div>
+        </div>
+        <div class="row">
+            <% projects.slice(0, 3).forEach(project => { %>
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card h-100 project-card">
+                    <div class="card-img-top bg-light text-center py-4">
+                        <i class="fas fa-microchip fa-4x text-primary"></i>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title"><%= project.title %></h5>
+                        <p class="card-text"><%= project.description.substring(0, 100) %>...</p>
+                        <div class="mb-3">
+                            <% project.technologies.slice(0, 3).forEach(tech => { %>
+                            <span class="badge bg-secondary me-1"><%= tech %></span>
+                            <% }) %>
+                        </div>
+                    </div>
+                    <div class="card-footer bg-transparent">
+                        <a href="<%= project.github %>" class="btn btn-outline-primary btn-sm" target="_blank">
+                            <i class="fab fa-github me-1"></i>View Code
+                        </a>
+                        <span class="badge bg-info float-end"><%= project.category %></span>
+                    </div>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+        <div class="text-center mt-4">
+            <a href="/projects" class="btn btn-primary btn-lg">
+                <i class="fas fa-arrow-right me-2"></i>View All Projects
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Preview Section -->
+<section class="bg-light py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="text-center mb-5">
+                    <i class="fas fa-tools me-3"></i>Technical Expertise
+                </h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="text-center">
+                    <i class="fas fa-microchip fa-3x text-primary mb-3"></i>
+                    <h5>Microcontrollers</h5>
+                    <p class="text-muted">STM32, ESP32, 8051, PIC</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="text-center">
+                    <i class="fas fa-code fa-3x text-primary mb-3"></i>
+                    <h5>Programming</h5>
+                    <p class="text-muted">C/C++, Assembly, Python</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="text-center">
+                    <i class="fas fa-wifi fa-3x text-primary mb-3"></i>
+                    <h5>IoT & Connectivity</h5>
+                    <p class="text-muted">WiFi, Bluetooth, MQTT</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 mb-4">
+                <div class="text-center">
+                    <i class="fas fa-robot fa-3x text-primary mb-3"></i>
+                    <h5>Robotics</h5>
+                    <p class="text-muted">Control Systems, Automation</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-5">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center">
-                <h1 class="display-4 fw-bold mb-4">
-                    <i class="fas fa-user-tie me-3"></i>About Me
-                </h1>
-                <p class="lead">Passionate Embedded Systems Engineer with expertise in microcontroller programming and IoT solutions</p>
+                <h3 class="mb-4">Ready to collaborate on your next embedded project?</h3>
+                <p class="lead mb-4">Let's discuss how I can help bring your hardware ideas to life.</p>
+                <a href="/contact" class="btn btn-primary btn-lg">
+                    <i class="fas fa-paper-plane me-2"></i>Start a Conversation
+                </a>
             </div>
         </div>
     </div>
 </section>
-
-<!-- About Content -->
-<section class="py-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8">
-                <h2 class="mb-4">Professional Background</h2>
-                <p class="lead mb-4">
-                    I am a dedicated Embedded Systems Engineer with over 5 years of experience in designing, 
-                    developing, and implementing microcontroller-based solutions. My passion lies in creating 
-                    innovative hardware solutions that bridge the gap between software and physical systems.
-                </p>
-                
-                <h3 class="mb-3">What I Do</h3>
-                <p class="mb-4">
-                    I specialize in developing embedded systems using various microcontrollers including STM32, 
-                    ESP32, 8051, and PIC series. My work encompasses IoT applications, robotics, automation 
-                    systems, and real-time control applications. I have a strong foundation in both hardware 
-                    design and software development for embedded systems.
-                </p>
-
-                <h3 class="mb-3">My Approach</h3>
-                <p class="mb-4">
-                    I believe in creating robust, efficient, and scalable embedded solutions. Every project 
-                    I undertake focuses on:
-                </p>
-                <ul class="list-unstyled">
-                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i><strong>Reliability:</strong> Ensuring systems work consistently in real-world conditions</li>
-                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i><strong>Efficiency:</strong> Optimizing code and hardware for performance and power consumption</li>
-                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i><strong>Innovation:</strong> Exploring new technologies and methodologies</li>
-                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i><strong>Documentation:</strong> Maintaining clear documentation for future maintenance</li>
-                </ul>
-            </div>
-            <div class="col-lg-4">
-                <div class="card">
-                    <div class="card-body text-center">
-                        <i class="fas fa-microchip fa-5x text-primary mb-3"></i>
-                        <h4>Sanket Mali</h4>
-                        <p class="text-muted">Embedded Systems Engineer</p>
-                        <hr>
-                        <div class="row text-start">
-                            <div class="col-12 mb-3">
-                                <h6><i class="fas fa-graduation-cap me-2"></i>Education</h6>
-                                <p class="mb-0">B.Tech in Electronics & Communication</p>
-                                <small class="text-muted">Specialization in Embedded Systems</small>
-                            </div>
-                            <div class="col-12 mb-3">
-                                <h6><i class="fas fa-map-marker-alt me-2"></i>Location</h6>
-                                <p class="mb-0">Mumbai, India</p>
-                            </div>
-                            <div class="col-12 mb-3">
-                                <h6><i class="fas fa-calendar-alt me-2"></i>Experience</h6>
-                                <p class="mb-0">5+ Years in Embedded Systems</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Experience Timeline -->
-<section class="py-5 bg-light">
-    <div class="container">
-        <h2 class="text-center mb-5">Professional Journey</h2>
-        <div class="row">
-            <div class="col-lg-10 mx-auto">
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-marker bg-primary"></div>
-                        <div class="timeline-content">
-                            <h5>Senior Embedded Systems Engineer</h5>
-                            <p class="text-muted">2023 - Present</p>
-                            <p>Leading development of IoT solutions and microcontroller-based systems. 
-                            Mentoring junior engineers and contributing to architectural decisions.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker bg-success"></div>
-                        <div class="timeline-content">
-                            <h5>Embedded Systems Engineer</h5>
-                            <p class="text-muted">2021 - 2023</p>
-                            <p>Developed various microcontroller projects including STM32 applications, 
-                            ESP32 IoT solutions, and PIC-based control systems.</p>
-                        </div>
-                    </div>
-                    <div class="timeline-item">
-                        <div class="timeline-marker bg-info"></div>
-                        <div class="timeline-content">
-                            <h5>Junior Embedded Engineer</h5>
-                            <p class="text-muted">2019 - 2021</p>
-                            <p>Started career with 8051 microcontroller programming and basic embedded 
-                            systems development.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="py-5">
-    <div class="container">
-        <h2 class="text-center mb-5">Core Values</h2>
-        <div class="row">
-            <div class="col-md-4 mb-4">
-                <div class="text-center">
-                    <i class="fas fa-lightbulb fa-3x text-warning mb-3"></i>
-                    <h5>Innovation</h5>
-                    <p>Constantly exploring new technologies and methodologies to create cutting-edge solutions.</p>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="text-center">
-                    <i class="fas fa-users fa-3x text-primary mb-3"></i>
-                    <h5>Collaboration</h5>
-                    <p>Working effectively with cross-functional teams to deliver comprehensive solutions.</p>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="text-center">
-                    <i class="fas fa-award fa-3x text-success mb-3"></i>
-                    <h5>Excellence</h5>
-                    <p>Maintaining high standards in code quality, documentation, and system reliability.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> 
-
-
-
-
