@@ -96,7 +96,9 @@
 <section class="py-5">
     <div class="container">
         <div class="row project-grid d-flex align-items-stretch">
-            <% projects.forEach(project => { %>
+            <% const allowedCategories = ['LPC2148', 'PIC16F877A', 'ESP32', 'AI/ML']; %>
+            <% const filteredProjects = projects.filter(p => allowedCategories.includes(p.category)); %>
+            <% filteredProjects.forEach(project => { %>
             <div class="col-lg-6 col-xl-4 mb-4 project-item" data-category="<%= project.category.toLowerCase().replace(/\s+/g, '-') %>">
                 <div class="card h-100 project-card">
                     <div class="card-img-top bg-light text-center py-4">
@@ -159,7 +161,7 @@
             <div class="col-md-3 col-sm-6 mb-4">
                 <div class="stat-item">
                     <i class="fas fa-microchip fa-3x text-primary mb-3"></i>
-                    <h3 class="fw-bold"><%= projects.length %></h3>
+                    <h3 class="fw-bold"><%= filteredProjects.length %></h3>
                     <p class="text-muted">Total Projects</p>
                 </div>
             </div>
