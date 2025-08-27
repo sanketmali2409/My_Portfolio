@@ -20,6 +20,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // 6. Import project data from JSON file
 const projectsData = require('./data/projects.json');
+const skillsData = require('./data/skills.json');
 
 // 7. Define routes for each page
 
@@ -27,7 +28,8 @@ const projectsData = require('./data/projects.json');
 app.get('/', (req, res) => {
     res.render('index', {
         title: 'Sanket Mali - Embedded Systems Engineer',
-        projects: projectsData.projects
+        projects: projectsData.projects,
+        skills: skillsData
     });
 });
 
@@ -50,7 +52,8 @@ app.get('/projects', (req, res) => {
 // Skills page route
 app.get('/skills', (req, res) => {
     res.render('skills', {
-        title: 'Skills - Sanket Mali'
+        title: 'Skills - Sanket Mali',
+        skills: skillsData
     });
 });
 

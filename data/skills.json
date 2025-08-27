@@ -1,0 +1,28 @@
+{
+  "categories": {
+    "Programming Languages": [
+      { "name": "C/C++", "level": 95 },
+      { "name": "Python", "level": 90 },
+      { "name": "JavaScript", "level": 75 },
+      { "name": "Embedded C", "level": 95 }
+    ],
+    "Microcontrollers & Platforms": [
+      { "name": "STM32", "level": 90 },
+      { "name": "AVR", "level": 85 },
+      { "name": "ESP32/ESP8266", "level": 88 },
+      { "name": "Raspberry Pi", "level": 80 }
+    ],
+    "Tools & Technologies": [
+      { "name": "Git & GitHub", "level": 90 },
+      { "name": "Docker", "level": 70 },
+      { "name": "PlatformIO", "level": 85 },
+      { "name": "FreeRTOS", "level": 80 }
+    ],
+    "Protocols": [
+        { "name": "I2C, SPI, UART", "level": 95 },
+        { "name": "MQTT", "level": 85 },
+        { "name": "HTTP/REST", "level": 80 },
+        { "name": "CAN Bus", "level": 75 }
+    ]
+  }
+}
