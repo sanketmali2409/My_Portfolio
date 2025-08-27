@@ -52,7 +52,7 @@ body {
 /* Hero Section */
 .hero-section {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    min-height: 80vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
 }
@@ -405,6 +405,7 @@ footer .social-links a:hover {
 
 /* Ensure main content doesn't hide behind fixed navbar */
 .main-content {
+    padding-top: 50px; /* Add space for the fixed navbar */
     min-height: 100vh;
 }
 
@@ -480,6 +481,10 @@ footer .social-links a:hover {
         border: 1px solid rgba(255,255,255,0.1);
     }
     
+    .main-content {
+        padding-top: 70px; /* Adjust padding for smaller navbar */
+    }
+
     .navbar-nav {
         text-align: center;
         padding: 0.5rem 0;
@@ -505,6 +510,10 @@ footer .social-links a:hover {
         font-size: 1.1rem !important;
     }
     
+    .main-content {
+        padding-top: 65px; /* Adjust padding for smallest navbar */
+    }
+
 }
 
 /* Ensure navbar stays on top */
