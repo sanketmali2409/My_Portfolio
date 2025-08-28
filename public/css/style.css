@@ -451,13 +451,13 @@ footer .social-links a:hover {
 
 .navbar-nav .nav-link.active {
     color: white !important;
-    background-color: rgba(0,123,255,0.3);
+    background-color: rgba(255, 255, 255, 0.9);
     font-weight: 600;
 }
 
 /* Navbar toggler button */
 .navbar-toggler {
-    border: 1px solid rgba(255,255,255,0.3) !important;
+    /* border: 1px solid rgba(255,255,255,0.3) !important; */
     padding: 4px 8px;
 }
 
@@ -564,7 +564,7 @@ footer .social-links a:hover {
     transform: translateX(-50%);
     width: 6px;
     height: 6px;
-    background-color: #007bff;
+    background-color: #3d3d3d;
     border-radius: 50%;
 }
 
@@ -632,5 +632,18 @@ footer .social-links a:hover {
 @media (max-width: 991.98px) {
     .project-icon-bg {
         min-height: 150px;
+    }
+}
+
+
+@media (max-width: 991.98px) {
+    .main-content {
+        padding-top: 55px; /* reduce from 70px */
+    }
+}
+
+@media (max-width: 575.98px) {
+    .main-content {
+        padding-top: 50px; /* reduce from 65px */
     }
 }
