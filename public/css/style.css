@@ -1,6 +1,7 @@
 /* Custom CSS for Embedded Systems Portfolio */
 //enhanced profiles 
 /* Profile Image Styles */
+//added css
 .profile-hero {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 4px solid rgba(255,255,255,0.3);
